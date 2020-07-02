@@ -14,7 +14,7 @@ class m200702_133023_seed_access_log_table extends Migration
     {
         echo "\n Starting seeding access log table...";
 
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 5; $i++) {
 
             $this->insert100k();
 
@@ -22,7 +22,7 @@ class m200702_133023_seed_access_log_table extends Migration
             sleep(2);
         }
 
-        echo "\n Seeding completed";
+        echo "\n Seeding completed \n";
 
         return true;
     }

@@ -16,13 +16,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= $this->render('_search', ['model' => $searchModel]); ?>
 
-    <div style="padding: 20px; text-align: center; background-color: #c6edc6;">
-        <?php if (!empty($visitorsCount)) : ?>
+    <?php if (!empty($visitorsCount)) : ?>
+        <div style="padding: 20px; text-align: center; background-color: #c6edc6;">
             Online visitors between <b><?= $searchModel->dateFrom ?></b>
             and <b><?= $searchModel->dateTo ?></b>:
             <b><?= $visitorsCount ?></b>
-        <?php else : ?>
-            Select interval
-        <?php endif; ?>
-    </div>
+        </div>
+    <?php endif; ?>
 </div>

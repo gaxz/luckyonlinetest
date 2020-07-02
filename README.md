@@ -29,6 +29,11 @@ http://localhost:8080/
 Database architecture can be found here:
 
     app\migrations\m200630_113353_create_book_table.php
+   
+Logging to database:
+
+    docker-compose exec mysql mysql -proot -D app
+
 SQL #1
 
     SELECT b.id, b.name, count(bc.category_id) as categories FROM book as b
@@ -46,3 +51,4 @@ SQL #2
 	    INNER JOIN book_category tbc 
 	    ON tbc.book_id != bc.book_id AND tbc.category_id = bc.category_id
     GROUP BY bc.book_id, tbc.book_id HAVING count(tbc.category_id) >= 10;
+
