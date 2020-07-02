@@ -3,7 +3,7 @@
 Clone project
 
     cd projectDir
-    git clone https://github.com/gaxz/realforcetest.git .
+    git clone https://github.com/gaxz/luckyonlinetest.git .
 
 Then build
 
